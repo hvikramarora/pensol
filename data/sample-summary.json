@@ -1,0 +1,10 @@
+{
+  "member_count": 1000,
+  "total_liability": 6948299215.042313,
+  "liability_by_status": {
+    "Active": 5262471068.329045,
+    "Pensioner": 1312875812.486935,
+    "Deferred": 372952334.2263279
+  },
+  "suggested_assets": 6392400000.0
+}

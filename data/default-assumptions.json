@@ -1,0 +1,15 @@
+{
+  "valuationDate": "2026-03-31",
+  "discountRate": 0.065,
+  "salaryGrowth": 0.055,
+  "pensionIncrease": 0.035,
+  "defermentIncrease": 0.04,
+  "normalRetirementAge": 60,
+  "accrualRate": 0.016666666666666666,
+  "maxService": 40,
+  "spouseProbability": 0.75,
+  "spousePensionPercent": 0.5,
+  "spouseAnnuityRatio": 0.85,
+  "mortalityScale": 1.0,
+  "currency": "INR"
+}
