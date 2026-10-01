@@ -1,8 +1,8 @@
-# PensionVal — a markiV Actuarial Engineering demo
+# PenSol — a markiV Actuarial Engineering demo
 
 **Excel reference model → reusable JavaScript actuarial engine → browser application → API-ready architecture**
 
-PensionVal is a practical demonstration of **Actuarial Engineering** using a defined benefit pension valuation workflow that would commonly be built and operated in Excel.
+PenSol is a practical demonstration of **Actuarial Engineering** using a defined benefit pension valuation workflow that would commonly be built and operated in Excel.
 
 The purpose is not to argue that Excel is wrong. Excel remains the **independent reference implementation and validation benchmark**. The engineering step is to separate actuarial methodology from spreadsheet cells and turn it into a transparent, testable and reusable calculation engine that can support different user interfaces and integrations.
 
@@ -45,7 +45,7 @@ The web app includes:
 ## Repository structure
 
 ```text
-pensionval-markiv/
+pensol/
 ├── index.html
 ├── README.md
 ├── NOTICE.md
@@ -64,7 +64,7 @@ pensionval-markiv/
 │   ├── sample-summary.json
 │   └── validation-benchmarks.csv
 ├── excel/
-│   └── PensionVal_Excel_Reference.xlsx
+│   └── PenSol_Excel_Reference.xlsx
 └── docs/
     ├── METHODOLOGY.md
     ├── VALIDATION.md
@@ -103,7 +103,7 @@ Excel reference model ─────► Frozen member & aggregate reconciliatio
 The reference workbook is:
 
 ```text
-excel/PensionVal_Excel_Reference.xlsx
+excel/PenSol_Excel_Reference.xlsx
 ```
 
 It contains separate sheets for:
@@ -145,7 +145,7 @@ See `docs/METHODOLOGY.md` for the detailed formulas and limitations.
 
 ## Mortality basis
 
-PensionVal intentionally uses a transparent illustrative curve rather than a proprietary or jurisdiction-specific table:
+PenSol intentionally uses a transparent illustrative curve rather than a proprietary or jurisdiction-specific table:
 
 ```text
 qx = A + B × c^x
@@ -158,7 +158,7 @@ A mortality multiplier supports simple sensitivity testing. A production impleme
 
 ## Privacy characteristic of this static demo
 
-The public demonstration is a **static browser application**. There is no PensionVal application server. An uploaded CSV is parsed and valued by JavaScript in the user's browser.
+The public demonstration is a **static browser application**. There is no PenSol application server. An uploaded CSV is parsed and valued by JavaScript in the user's browser.
 
 That is useful for a demo, but it is not in itself a complete security design. A production deployment would still require explicit decisions on authentication, authorisation, encryption, audit logging, data retention, secure hosting and operational controls.
 
@@ -177,7 +177,7 @@ Recognised statuses are `Active`, `Deferred` and `Pensioner`.
 
 ## Run locally
 
-Because PensionVal is a static application, any local HTTP server is enough. For example:
+Because PenSol is a static application, any local HTTP server is enough. For example:
 
 ```bash
 python -m http.server 8000
@@ -214,13 +214,13 @@ Keeping the JavaScript plain is intentional: conference attendees can open `engi
 
 ## Important limitations
 
-PensionVal is an educational and architectural demonstration. It does **not** claim compliance with IAS 19, ASC 715 or any pension funding, tax, accounting or regulatory regime. It does not model all real scheme provisions. Examples omitted from the base demo include commutation, guaranteed periods, early/late retirement factors, multiple benefit tranches, sex-specific or member-specific mortality, improvement scales, decrement interactions, expenses and jurisdiction-specific disclosure rules.
+PenSol is an educational and architectural demonstration. It does **not** claim compliance with IAS 19, ASC 715 or any pension funding, tax, accounting or regulatory regime. It does not model all real scheme provisions. Examples omitted from the base demo include commutation, guaranteed periods, early/late retirement factors, multiple benefit tranches, sex-specific or member-specific mortality, improvement scales, decrement interactions, expenses and jurisdiction-specific disclosure rules.
 
 Those omissions are intentional: the first version keeps the calculation basis transparent enough to inspect live while still looking and behaving like a genuine pension valuation workflow.
 
 ## Customisation
 
-Pension schemes rarely share exactly the same rules. PensionVal is designed so that benefit logic can be extended without rebuilding the entire interface.
+Pension schemes rarely share exactly the same rules. PenSol is designed so that benefit logic can be extended without rebuilding the entire interface.
 
 Possible extensions include:
 
@@ -244,5 +244,5 @@ Possible extensions include:
 
 ---
 
-**PensionVal · markiV Actuarial Engineering**  
+**PenSol · markiV Actuarial Engineering**  
 Synthetic data. Illustrative assumptions. Transparent code. Real actuarial workflow.
